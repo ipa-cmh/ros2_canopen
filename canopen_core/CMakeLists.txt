@@ -253,6 +253,8 @@ ament_export_dependencies(
   canopen_interfaces
   lely_core_libraries
   yaml_cpp_vendor
+  rclcpp_lifecycle
+  lifecycle_msgs
 )
 
 ament_package()
