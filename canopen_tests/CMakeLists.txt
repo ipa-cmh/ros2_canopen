@@ -15,6 +15,7 @@ find_package(lely_core_libraries REQUIRED)
 
 dcfgen(${CMAKE_CURRENT_SOURCE_DIR}/config/simple/ simple.yml ${CMAKE_BINARY_DIR}/config/simple/)
 dcfgen(${CMAKE_CURRENT_SOURCE_DIR}/config/cia402/ cia402.yml ${CMAKE_BINARY_DIR}/config/cia402/)
+dcfgen(${CMAKE_CURRENT_SOURCE_DIR}/config/cia402_lifecycle/ cia402.yml ${CMAKE_BINARY_DIR}/config/cia402_lifecycle/)
 
 install(DIRECTORY
   launch/
