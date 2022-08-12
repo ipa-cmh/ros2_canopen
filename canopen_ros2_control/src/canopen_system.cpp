@@ -73,7 +73,7 @@ hardware_interface::CallbackReturn CanopenSystem::on_init(
   RCLCPP_INFO(kLogger, "master_bin: '%s'", info_.hardware_parameters["master_bin"].c_str());
 
   executor_ = std::make_shared<rclcpp::executors::MultiThreadedExecutor>();
-  device_manager_ = std::make_shared<DeviceManager>(executor_);
+  device_manager_ = std::make_shared<DeviceContainerNode>(executor_);
   executor_->add_node(device_manager_);
 
   // threads

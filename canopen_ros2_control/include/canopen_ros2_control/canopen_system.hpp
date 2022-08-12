@@ -37,7 +37,7 @@
 #include "rclcpp_lifecycle/state.hpp"
 
 #include "rclcpp/executors.hpp"  // for MultiThreadedExecutor
-#include "canopen_core/device_manager.hpp" // for DeviceManager
+#include "canopen_core/device_container.hpp" // for DeviceManager
 
 namespace canopen_ros2_control
 {
@@ -171,7 +171,7 @@ private:
   std::vector<double> hw_commands_;
   std::vector<double> hw_states_;
 
-  std::shared_ptr<DeviceManager> device_manager_;
+  std::shared_ptr<DeviceContainerNode> device_manager_;
   std::shared_ptr<rclcpp::executors::MultiThreadedExecutor> executor_;
   std::shared_ptr<rclcpp_components::ComponentManager> component_manager_;
   std::shared_ptr<rclcpp::Node> node_;
