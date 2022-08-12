@@ -1,5 +1,5 @@
-Motion Controller Driver
-========================
+402 Driver Interface
+====================
 
 The Motion Controller Driver implements the CIA402 profile and enables setting
 the drive status, operation mode and sending target values to the motion controller.

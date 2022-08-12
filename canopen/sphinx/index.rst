@@ -6,38 +6,46 @@ This is the documentation of the ROS2 CANopen stack.
 
 .. toctree::
   :maxdepth: 1
-  :caption: General
+  :caption: 01 General
 
   01_general/overview
   01_general/installation
   01_general/design-objectives
 
-
 .. toctree::
   :maxdepth: 1
-  :caption: Lifecycled Operation
-
-  02_lifecycled_operation/overview.rst
-
-
-.. toctree::
-  :maxdepth: 1
-  :caption: Non Lifecycled Operation
+  :caption: 02 Service-based Operation
   
-  03_non_lifecycled_operation/overview
+  02_service_based_operation/overview
+  02_service_based_operation/legacy-overview
+  02_service_based_operation/lifecycle-overview
+  02_service_based_operation/master-interface
+  02_service_based_operation/proxy-driver-interface
+  02_service_based_operation/402-driver-interface
   
 
 .. toctree::
   :maxdepth: 1
-  :caption: ROS2 Control Operation
+  :caption: 03 Control-based Operation
 
-  04_ros2_control_operation/overview
+  03_ros2_control_operation/overview
+  03_ros2_control_operation/system-interface
 
 
 .. toctree::
   :maxdepth: 1
-  :caption: Usage
+  :caption: 04 Usage
 
-  05_usage/configuration-package.rst
-  05_usage/running-configuration-package.rst
-  05_usage/configuration.rst
+  04_usage/usage-considerations.rst
+  04_usage/configuration-package.rst
+  04_usage/starting-configuration-package.rst
+  04_usage/configuration.rst
+
+
+.. toctree:: 
+  :maxdepth: 1
+  :caption: 05 Tests
+
+  05_tests/proxy-test
+  05_tests/cia402-test
+  

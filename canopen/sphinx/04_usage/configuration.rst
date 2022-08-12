@@ -1,4 +1,4 @@
-Bus Configuration
+Bus Configuration Details
 ============================
 
 The ros2_canopen stack relies on a YAML configuration file that is used 

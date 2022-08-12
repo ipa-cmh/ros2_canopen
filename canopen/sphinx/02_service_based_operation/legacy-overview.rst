@@ -1,12 +1,12 @@
-Device Manager
-==============
+Legacy Operation
+================
 
 The device manager implements ROS2 component manager interface and can therefore be handled similar to a
 container node. This enables flexibly loading and unloading the driver nodes necessary for commanding
 each device on the bus. The user can decide when the device should be activated. 
 
 
-.. figure:: images/device-manager.png
+.. figure:: ../images/device-manager.png
     :alt: Device Manager Concept
 
     device manager concept
@@ -22,7 +22,7 @@ for that specific driver.
 
 All loaded nodes are added to the device manager's executor.
 
-.. figure:: images/device-manager-usage.png
+.. figure:: ../images/device-manager-usage.png
     :alt: Device Manager Usage
 
     device manager usage

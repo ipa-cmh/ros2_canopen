@@ -1,5 +1,5 @@
-NMT test
-========
+Proxy Test
+================
 
 Test details
 ------------
@@ -9,6 +9,6 @@ Test details
     :delim: ;
     
     Package; canopen_proxy_driver
-    Test file; test/test_nmt.py
-    Description; Checks whether nmt services are available and can be called.
+    Test file; test/test_concurrency.py
+    Description; Checks concurrent reads and writes with SDO.
     Prequisites; van0 must be available

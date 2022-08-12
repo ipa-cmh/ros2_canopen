@@ -1,5 +1,5 @@
 @startuml Startup Sequence
-    User -> DeviceContainer: User
+    User -> DeviceContainer: Launch
     DeviceContainer -> Master: Load
     DeviceContainer -> Drivers: Load
     DeviceContainer -> DeviceManager: Load

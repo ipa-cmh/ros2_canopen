@@ -1,5 +1,5 @@
-Master Node
-===========
+Master Node Interface
+=====================
 
 The master node handles the creation of the necessary can interface and sets up a canopen event loop which drivers can hook onto. In addition, the node offers services for communicating with nodes via nmt and sdo. The device manager will automatically spawn a master node on start-up. The master node is configured by the provided dcf file.
 

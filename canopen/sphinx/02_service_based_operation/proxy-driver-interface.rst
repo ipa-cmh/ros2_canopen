@@ -1,5 +1,5 @@
-Proxy Driver
-===================
+Proxy Driver Interface
+======================
 A proxy driver which simply forwards CANopen functionality for a specific device via ROS2 services and messages.
 
 Services

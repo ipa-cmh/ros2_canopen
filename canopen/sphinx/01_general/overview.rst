@@ -17,6 +17,10 @@ ros2_canopen contains a number of packages that serve different serve different 
   A colcon package wrapper for the lelycore canopen library, for convenient
   installation with rosdep.
 
+* **canopen_interfaces**:
+  
+  The ros2 interface definitions for non standard messages and services used by ros2_canopen.
+
 * **canopen_core**:
   
   Contains the core structures of the ros2_canopen stack such as the device manager
@@ -38,4 +42,19 @@ ros2_canopen contains a number of packages that serve different serve different 
   the profiles functionalities via ROS2 services and messages. The implementation is
   copied from ros_canopen/canopen_402 and this package is licensed accordingly under 
   GNU Lesser General Public License v3.0!
+
+* **canopen_utils**: 
+  
+  Contains utilities to simplifiy testing and interaction with CANopen devices.
+
+* **canopen_mock_slave**:
+  
+  Contains CANopen slaves that for testing purposes. Currently, this includes a slave
+  for testing simple CANopen interaction and a slave that implements CIA402 profile
+  partially.
+
+* **canopen_tests**:
+  
+  This package contains launch_tests for testing ros2_canopen against mock slaves.
+  
 
