@@ -1,0 +1,55 @@
+@startuml CIA402 State Machine
+
+state "Unconfigured" as U
+U : Device is unconfigured
+state "Inactive" as I
+I : Canopen connection available
+I : Controller mode choice
+state "Active" as A
+A : Torque enabled
+A : Controller mode choice
+A : Periodically Read (handleRead)
+A : Periodically Write (handleWrite)
+state "Finalized" as F
+
+
+state "Initialising" as OI #LightGreen
+state "Configuring" as OC #LightGreen
+OC : Reading configuration files
+OC : Reading parameters
+OC : Start master and CANopen Event Loop
+OC : Start drivers nodes
+state "Activating" as OA #LightGreen
+OA : Initialize CIA402 device (handleInit)
+OA : Set controller mode
+state "Deactivating" as OD #LightGreen
+OD : Set NoMode controller mode
+OD : Shutdown CIA402 Device (handleShutdown)
+state "Cleaning Up" as OCU #LightGreen
+OCU : Stop drivers
+OCU : Stop master and CANopen Event Loop
+state "Shutting Down" as OSD #LightGreen
+OSD : Depends on previous state 
+state "Error Processing" as OEP #LightGreen
+
+[*] --> OI
+F --> [*]
+
+U <-- OI
+U --> OC
+U <-- OC
+U <-- OCU
+U --> OSD
+OSD <-- A 
+OSD --> F
+OSD <-- I
+OC --> I
+I --> OA
+I <-- OD
+OA --> A
+OCU <-- I
+OD <-- A
+I <-- OA
+OEP --> F
+
+@enduml

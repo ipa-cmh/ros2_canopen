@@ -6,21 +6,21 @@ need to create a driver for a specific device or a specific device profile. If y
 a driver for a device profile we are happy to integrate the package into this repository - simply create
 a PR.
 
-Option 1: From BaseDriver
+Option 1: From LifecycleBaseDriver
 -------------------------------
-Derive your driver from BaseDriver, which has callbacks for rpdo and nmt changes, but no ros services
+Derive your driver from LifecycleBaseDriver, which has callbacks for rpdo and nmt changes, but no ros services
 whatsoever.
 
-.. doxygenclass:: ros2_canopen::BaseDriver
+.. doxygenclass:: ros2_canopen::LifecycleBaseDriver
    :project: ros2_canopen
    :protected-members:
 
 
-Option 2: From ProxyDriver
+Option 2: From LifecycleProxyDriver
 --------------------------------
-Derive your driver from ProxyDriver, which has services for nmt, sdo and publishers and subscribers for pdo included.
+Derive your driver from LifecycleProxyDriver, which has services for nmt, sdo and publishers and subscribers for pdo included.
 
-.. doxygenclass:: ros2_canopen::ProxyDriver
+.. doxygenclass:: ros2_canopen::LifecycleProxyDriver
    :project: ros2_canopen
    :protected-members:
 

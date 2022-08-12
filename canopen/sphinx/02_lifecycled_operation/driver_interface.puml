@@ -1,0 +1,22 @@
+@startuml Driver Interface
+class "rclcpp_lifeycle::LifecycleNode" as LN
+
+abstract class "ros2_canopen::LifecycleDriverInterface" as LDI{
+    Executor exec_
+    Master master_
+    unit32_t node_id_
+    ConfigurationManager config_
+    virtual void {abstract} init() = 0
+    virtual void {abstract} init_from_master(Executor exec, Master master, ConfigurationManager config) = 0
+    virtual bool {abstract} add() = 0
+    virtual bool {abstract} remove() = 0
+    virtual void register_ros_interface()
+    virtual void start_threads()
+    virtual void start_timers()
+    virtual void stop timers()
+    virtual void join_threads()
+}
+
+LN <|--- LDI 
+
+@enduml

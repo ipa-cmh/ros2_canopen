@@ -33,8 +33,9 @@ extensions = [
  'sphinx.ext.imgmath',
  'sphinx.ext.todo',
  'sphinx.ext.graphviz',
- 'breathe',
- 'exhale'
+ 'sphinxcontrib.plantuml',
+#  'breathe',
+#  'exhale'
 ]
 
 breathe_projects = { "ros2_canopen": "../doxygen/doc_output/xml" }
@@ -51,7 +52,7 @@ exhale_args = {
     "createTreeView":        True,
     # TIP: if using the sphinx-bootstrap-theme, you need
     # "treeViewIsBootstrap": True,
-    "exhaleExecutesDoxygen": True,
+    "exhaleExecutesDoxygen": False,
     "exhaleDoxygenStdin":    "INPUT = ../../canopen_core/include/ ../../canopen_base_driver/include ../../canopen_402_driver/include ../../canopen_proxy_driver/include"
 }
 

@@ -1,0 +1,28 @@
+@startuml CIA402 State Machine
+
+state "Not Ready To Switch On" as NRS
+state "Switch On Disabled" as SOD #green
+state "Ready to Switch On" as RTS #green
+state "Switched On" as SO #green
+state "Operation enabled" as OE #green
+state "Quick Stop Active" as QSA
+state "Fault Reaction Active" as FRA #green
+state "Fault" as FA #green
+
+[*] --> NRS
+NRS --> SOD
+SOD --> RTS : Shutdown
+SOD <-- RTS : Disable Voltage
+RTS --> SO : Switch On
+RTS <-- SO : Shutdown
+SO --> OE : Enable Operation
+SO <-- OE : Swith On
+SO -->SOD : Disable Voltage
+OE --> QSA : Quick Stop
+OE <-- QSA : Operation Enable
+OE --> RTS : Shutdown
+OE --> SOD : Disable Voltage
+QSA --> SOD : Disable Voltage
+FRA --> FA
+FA --> SOD : Fault Reset
+@enduml

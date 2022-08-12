@@ -6,42 +6,38 @@ This is the documentation of the ROS2 CANopen stack.
 
 .. toctree::
   :maxdepth: 1
-  :caption: Getting started
+  :caption: General
 
-  overview
-  installation
-    
+  01_general/overview
+  01_general/installation
+  01_general/design-objectives
+
+
 .. toctree::
   :maxdepth: 1
-  :caption: Concepts and Design
+  :caption: Lifecycled Operation
 
-  design-objectives
-  configuration
-  device-manager
-  system-interface
-  master
-  proxy-device
-  motion-controller
+  02_lifecycled_operation/overview.rst
+
+
+.. toctree::
+  :maxdepth: 1
+  :caption: Non Lifecycled Operation
+  
+  03_non_lifecycled_operation/overview
+  
+
+.. toctree::
+  :maxdepth: 1
+  :caption: ROS2 Control Operation
+
+  04_ros2_control_operation/overview
+
 
 .. toctree::
   :maxdepth: 1
   :caption: Usage
-  
-  configuration-package
-  running-configuration-package
-  
 
-.. toctree::
-  :maxdepth: 1
-  :caption: Extension
-
-  new-driver
-  new-master
-
-.. toctree::
-  :maxdepth: 1
-  :caption: Tests and Benchmarks
-
-  alpha-test-description
-  sil-tests
-  tested-hardware
+  05_usage/configuration-package.rst
+  05_usage/running-configuration-package.rst
+  05_usage/configuration.rst

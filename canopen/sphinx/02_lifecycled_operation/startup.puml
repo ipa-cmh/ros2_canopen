@@ -1,0 +1,14 @@
+@startuml Startup Sequence
+    User -> DeviceContainer: User
+    DeviceContainer -> Master: Load
+    DeviceContainer -> Drivers: Load
+    DeviceContainer -> DeviceManager: Load
+    User -> DeviceManager: Configure
+    User -> DeviceManager: Activate
+    DeviceManager -> Master: Configure
+    DeviceManager -> Master: Activate
+    DeviceManager -> Drivers: Configure
+    Drivers -> DeviceContainer: Initialisation required
+    DeviceContainer -> Master: Initialise Driver
+    DeviceManager -> Drivers: Activate
+@enduml
