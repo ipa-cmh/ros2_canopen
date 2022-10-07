@@ -17,6 +17,7 @@ void NodeCanopenBasicMaster<NODETYPE>::activate(bool called_from_base)
 template <class NODETYPE>
 void NodeCanopenBasicMaster<NODETYPE>::deactivate(bool called_from_base)
 {
+    RCLCPP_INFO(this->node_->get_logger(), "deactivate master reset");
     this->master_.reset();
 }
 
