@@ -260,7 +260,8 @@ void NodeCanopen402Driver<NODETYPE>::add_to_master()
 		{
 			std::scoped_lock<std::mutex> lock(this->driver_mutex_);
 			mc_driver_ = std::make_shared<LelyMotionControllerBridge>(*(this->exec_), *(this->master_), this->node_id_, this->node_->get_name());
-			mc_driver_->Boot();
+			//mc_driver_->Boot();
+            //mc_driver_->nmt_command(lely::canopen::NmtCommand::RESET_NODE);
 			prom->set_value(mc_driver_);
 		});
 	auto future_status = f.wait_for(this->non_transmit_timeout_);
